@@ -1,0 +1,20 @@
+# Site settings
+name: laofo 
+title: laofo
+nickname: laofo
+description: laofo's blog
+author: laofo
+twitter_username: laofo
+github_username: laofo
+
+# Build settings
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extensions: ["smart", "tables", "no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
+
+IMG_PATH: http://laofo.net
+
+baseurl: ""
+url: "http://laofo.com"
+permalink: /:year/:month/:title/

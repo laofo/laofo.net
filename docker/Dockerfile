@@ -3,14 +3,13 @@ MAINTAINER laofo <laofo521@gmail.com>
 
 ENV RVM_PATH /home/rvm/
 ENV HOME /root
+ARG CMBUILD_PASSWD=hehe
 
 RUN groupadd cmbuild && useradd -g cmbuild -s /bin/bash -c Admin cmbuild  &&  \
     mkdir -p /home/cmbuild && chown cmbuild:cmbuild -R /home/cmbuild && \
-    echo "cmbuild:MhxzKhlsdfsdfsfd" | chpasswd && \
+    echo "cmbuild:$CMBUILD_PASSWD" | chpasswd && \
     echo "cmbuild   ALL=(ALL)       ALL" >> /etc/sudoers
 
-#RUN yum update && \
-#    yum -y upgrade && \
 RUN    yum install -y build-essential \
 	vim \
 	curl \
